@@ -1,0 +1,35 @@
+{{!-- ./views/books/edit.hbs --}}
+<h1>Editar libro</h1>
+
+Este es el id: {{data._id}}
+
+{{!-- Cuatro tipos de metodos, update, delete, post  --}}
+<form action="/books/{{data._id}}/edit" method="POST">
+	<label>Título</label>
+	<input type="text" name="title" value="{{data.title}}" />
+
+	<br />
+
+	<label>Descripción</label>
+	<textarea type="text" name="description">
+		{{data.description}}
+	</textarea>
+
+	<br />
+
+	<label>Autor</label>
+	<input type="text" name="author" value="{{data.author}}" />
+
+	<br />
+
+	<label>Rating</label>
+	<input type="number" name="rating" value="{{data.rating}}" />
+
+	<br />
+
+	<button>
+		Guardar nuevos cambios
+	</button>
+
+
+</form>
